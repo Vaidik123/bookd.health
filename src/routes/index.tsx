@@ -514,7 +514,7 @@ function Home() {
                       key={f.label}
                       className="flex cursor-pointer items-center gap-2"
                       onMouseEnter={() => setLitFeature(fi)}
-                      onMouseLeave={() => setLitFeature(0)}
+                      onClick={() => setLitFeature(fi)}
                       whileHover={{ scale: 1.03, x: 2 }}
                       transition={{ duration: 0.18 }}
                       animate={{
