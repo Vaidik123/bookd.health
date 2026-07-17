@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="bookd-g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E23A0E"/>
+      <stop offset="100%" stop-color="#F28A45"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#bookd-g)" fill-rule="evenodd" d="
+    M28 28 a22 22 0 1 0 44 0 a22 22 0 1 0 -44 0
+    M6 50 a22 22 0 1 0 44 0 a22 22 0 1 0 -44 0
+    M50 50 a22 22 0 1 0 44 0 a22 22 0 1 0 -44 0
+    M28 72 a22 22 0 1 0 44 0 a22 22 0 1 0 -44 0
+  "/>
+</svg>
