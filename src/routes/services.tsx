@@ -199,16 +199,16 @@ function Services() {
                 >
                   {s.num}
                 </span>
-                <h2 className="mt-5 text-[26px] font-medium tracking-tight transition-colors duration-300 group-hover:text-white md:text-[30px]">
+                <h2 className="mt-5 text-[26px] font-medium tracking-tight transition-colors duration-300 group-hover:text-white group-active:text-white md:text-[30px]">
                   {s.title}
                 </h2>
                 <p
-                  className="mt-4 text-[15px] text-muted-foreground transition-colors duration-300 group-hover:text-white/80"
+                  className="mt-4 text-[15px] text-muted-foreground transition-colors duration-300 group-hover:text-white/80 group-active:text-white/80"
                   style={{ lineHeight: 1.6 }}
                 >
                   {s.body}
                 </p>
-                <p className="mt-4 text-[15px] font-medium transition-colors duration-300 group-hover:text-white">
+                <p className="mt-4 text-[15px] font-medium transition-colors duration-300 group-hover:text-white group-active:text-white">
                   {s.outcome}
                 </p>
               </div>

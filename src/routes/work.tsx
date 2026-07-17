@@ -213,11 +213,11 @@ function Work() {
                 <span className="relative z-10 self-start rounded-full bg-muted px-3.5 py-1.5 text-[13px] font-medium text-muted-foreground">
                   {p.tag}
                 </span>
-                <h3 className="relative z-10 mt-5 text-[22px] font-medium tracking-tight transition-colors duration-300 group-hover:text-white">
+                <h3 className="relative z-10 mt-5 text-[22px] font-medium tracking-tight transition-colors duration-300 group-hover:text-white group-active:text-white">
                   {p.title}
                 </h3>
                 <p
-                  className="relative z-10 mt-3 text-[15px] text-muted-foreground transition-colors duration-300 group-hover:text-white/80"
+                  className="relative z-10 mt-3 text-[15px] text-muted-foreground transition-colors duration-300 group-hover:text-white/80 group-active:text-white/80"
                   style={{ lineHeight: 1.6 }}
                 >
                   {p.body}
@@ -229,7 +229,7 @@ function Work() {
                   >
                     {p.stat}
                   </span>
-                  <span className="text-[13px] text-muted-foreground transition-colors duration-300 group-hover:text-white/80">
+                  <span className="text-[13px] text-muted-foreground transition-colors duration-300 group-hover:text-white/80 group-active:text-white/80">
                     {p.statLabel}
                   </span>
                 </div>
@@ -294,15 +294,15 @@ function Work() {
                   >
                     {step.num}
                   </span>
-                  <span className="text-[13px] font-medium text-muted-foreground transition-colors duration-300 group-hover:text-white/80">
+                  <span className="text-[13px] font-medium text-muted-foreground transition-colors duration-300 group-hover:text-white/80 group-active:text-white/80">
                     {step.when}
                   </span>
                 </div>
-                <h3 className="relative z-10 mt-5 text-[20px] font-medium tracking-tight transition-colors duration-300 group-hover:text-white">
+                <h3 className="relative z-10 mt-5 text-[20px] font-medium tracking-tight transition-colors duration-300 group-hover:text-white group-active:text-white">
                   {step.title}
                 </h3>
                 <p
-                  className="relative z-10 mt-3 text-[15px] text-muted-foreground transition-colors duration-300 group-hover:text-white/80"
+                  className="relative z-10 mt-3 text-[15px] text-muted-foreground transition-colors duration-300 group-hover:text-white/80 group-active:text-white/80"
                   style={{ lineHeight: 1.6 }}
                 >
                   {step.body}

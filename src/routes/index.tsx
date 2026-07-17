@@ -258,6 +258,28 @@ function TestimonialRotator() {
 
 function Home() {
   const [litFeature, setLitFeature] = useState(0)
+  const heroVideoRef = useRef<HTMLVideoElement>(null)
+
+  // iOS blocks autoplay in Low Power Mode and shows a play glyph;
+  // retry on load and again on the first touch/click.
+  useEffect(() => {
+    const v = heroVideoRef.current
+    if (!v) return
+    const tryPlay = () => {
+      if (v.paused) v.play().catch(() => {})
+    }
+    tryPlay()
+    document.addEventListener('touchstart', tryPlay, {
+      once: true,
+      passive: true,
+    })
+    document.addEventListener('click', tryPlay, { once: true })
+    return () => {
+      document.removeEventListener('touchstart', tryPlay)
+      document.removeEventListener('click', tryPlay)
+    }
+  }, [])
+
   return (
     <div className="min-h-screen bg-background">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
@@ -302,12 +324,13 @@ function Home() {
             <span className="block text-[40px] sm:text-[56px] md:text-[84px]">
               <AnimatedWords text="for your" delayStart={1.95} stagger={0.05} />{' '}
               <motion.video
+                ref={heroVideoRef}
                 src={nurseVideo}
                 autoPlay
                 loop
                 muted
                 playsInline
-                preload="metadata"
+                preload="auto"
                 className="inline-block h-[56px] w-[56px] rounded-full object-cover align-middle sm:h-[80px] sm:w-[80px] md:h-[104px] md:w-[104px]"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
@@ -694,11 +717,11 @@ function Home() {
                 >
                   {String(i + 1).padStart(2, '0')}
                 </span>
-                <h3 className="relative z-10 mt-5 text-[20px] font-medium tracking-tight transition-colors duration-300 group-hover:text-white">
+                <h3 className="relative z-10 mt-5 text-[20px] font-medium tracking-tight transition-colors duration-300 group-hover:text-white group-active:text-white">
                   {s.title}
                 </h3>
                 <p
-                  className="relative z-10 mt-3 text-[15px] text-muted-foreground transition-colors duration-300 group-hover:text-white/80"
+                  className="relative z-10 mt-3 text-[15px] text-muted-foreground transition-colors duration-300 group-hover:text-white/80 group-active:text-white/80"
                   style={{ lineHeight: 1.55 }}
                 >
                   {s.body}
@@ -754,11 +777,11 @@ function Home() {
                   >
                     {String(i + 1).padStart(2, '0')}
                   </span>
-                  <h3 className="relative z-10 mt-5 text-[18px] font-medium tracking-tight transition-colors duration-300 group-hover:text-white">
+                  <h3 className="relative z-10 mt-5 text-[18px] font-medium tracking-tight transition-colors duration-300 group-hover:text-white group-active:text-white">
                     {w.title}
                   </h3>
                   <p
-                    className="relative z-10 mt-2 text-[15px] text-muted-foreground transition-colors duration-300 group-hover:text-white/80"
+                    className="relative z-10 mt-2 text-[15px] text-muted-foreground transition-colors duration-300 group-hover:text-white/80 group-active:text-white/80"
                     style={{ lineHeight: 1.55 }}
                   >
                     {w.body}
@@ -888,7 +911,7 @@ function Home() {
                   {!p.popular && (
                     <span
                       aria-hidden
-                      className="mesh-showcase pointer-events-none inset-0 rounded-[inherit] opacity-0 transition-opacity duration-400 group-hover/btn:opacity-100"
+                      className="mesh-showcase pointer-events-none inset-0 rounded-[inherit] opacity-0 transition-opacity duration-400 group-hover/btn:opacity-100 group-active/btn:opacity-100"
                       style={{ position: 'absolute' }}
                     />
                   )}
@@ -896,7 +919,7 @@ function Home() {
                     className={
                       p.popular
                         ? 'relative z-10'
-                        : 'relative z-10 transition-colors duration-300 group-hover/btn:text-white'
+                        : 'relative z-10 transition-colors duration-300 group-hover/btn:text-white group-active/btn:text-white'
                     }
                   >
                     Book a Call

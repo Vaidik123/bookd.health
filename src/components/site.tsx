@@ -86,13 +86,13 @@ export function Rise({
 
 /* ---------------- MeshOverlay (gradient hover for cards) ----------------
    Add className="group relative overflow-hidden" to the card and drop this
-   inside; pair text with group-hover:text-white / white-70 classes. */
+   inside; pair text with group-hover:text-white group-active:text-white / white-70 classes. */
 
 export function MeshOverlay() {
   return (
     <div
       aria-hidden
-      className="mesh-showcase pointer-events-none inset-0 rounded-[inherit] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+      className="mesh-showcase pointer-events-none inset-0 rounded-[inherit] opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-active:opacity-100"
       style={{ position: 'absolute' }}
     />
   )
