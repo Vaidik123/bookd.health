@@ -297,7 +297,7 @@ function Home() {
             }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut', delay: 1.5 }}
+            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.7 }}
           >
             <span
               className="flex items-center justify-center bg-white text-foreground"
@@ -317,12 +317,12 @@ function Home() {
             <span className="block text-[40px] sm:text-[56px] md:text-[84px]">
               <AnimatedWords
                 text="AI that converts patients"
-                delayStart={1.7}
+                delayStart={0.9}
                 stagger={0.05}
               />
             </span>
             <span className="block text-[40px] sm:text-[56px] md:text-[84px]">
-              <AnimatedWords text="for your" delayStart={1.95} stagger={0.05} />{' '}
+              <AnimatedWords text="for your" delayStart={1.05} stagger={0.05} />{' '}
               <motion.video
                 ref={heroVideoRef}
                 src={nurseVideo}
@@ -334,12 +334,12 @@ function Home() {
                 className="inline-block h-[56px] w-[56px] rounded-full object-cover align-middle sm:h-[80px] sm:w-[80px] md:h-[104px] md:w-[104px]"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
-                transition={{ duration: 0.6, ease: 'backOut', delay: 2.15 }}
+                transition={{ duration: 0.6, ease: 'backOut', delay: 1.2 }}
               />{' '}
               <AnimatedWords
                 text="medical practice"
                 className="text-foreground/25"
-                delayStart={2.1}
+                delayStart={1.15}
                 stagger={0.05}
               />
             </span>
@@ -350,7 +350,7 @@ function Home() {
             style={{ lineHeight: 1.5 }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut', delay: 2.5 }}
+            transition={{ duration: 0.8, ease: 'easeOut', delay: 1.35 }}
           >
             From lead capture to booked appointments, automated, optimized, and
             built to scale.
@@ -364,7 +364,7 @@ function Home() {
               className="rounded-full border border-border bg-white px-6 py-3 text-[15px] font-medium shadow-[0_1px_0_rgba(0,0,0,0.04)] transition-colors hover:bg-muted"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
-              transition={{ duration: 0.5, ease: 'backOut', delay: 2.7 }}
+              transition={{ duration: 0.5, ease: 'backOut', delay: 1.55 }}
             >
               See our work
             </motion.a>
@@ -375,7 +375,7 @@ function Home() {
               className="mesh-showcase overflow-hidden rounded-full px-6 py-3 text-[15px] font-semibold text-white"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
-              transition={{ duration: 0.5, ease: 'backOut', delay: 2.8 }}
+              transition={{ duration: 0.5, ease: 'backOut', delay: 1.65 }}
               whileHover={{ scale: 1.02 }}
             >
               Book a Call
@@ -388,8 +388,9 @@ function Home() {
       <motion.section
         className="mesh-showcase mx-4 mt-16 overflow-hidden rounded-[28px] p-5 md:p-7"
         initial={{ opacity: 0, y: 60 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: EASE, delay: 3.0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-80px' }}
+        transition={{ duration: 1, ease: EASE, delay: 0.05 }}
       >
         <div className="grid gap-5 md:grid-cols-2">
           {/* Left inner card */}
@@ -397,8 +398,9 @@ function Home() {
             className="relative flex min-h-[360px] flex-col rounded-[22px] p-6 md:p-7"
             style={{ background: '#1E1D19', color: '#fff' }}
             initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut', delay: 3.2 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.15 }}
           >
             <motion.span
               className="flex items-center justify-center text-xs font-medium"
@@ -410,8 +412,9 @@ function Home() {
                 color: '#111114',
               }}
               initial={{ scale: 2.4, opacity: 0.2 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.7, ease: EASE, delay: 3.45 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, ease: EASE, delay: 0.35 }}
             >
               Pro
             </motion.span>
@@ -421,12 +424,13 @@ function Home() {
               style={{ lineHeight: 1.15 }}
             >
               <span className="block">
-                <AnimatedWords text="The Complete Growth" delayStart={3.6} />
+                <AnimatedWords inView text="The Complete Growth" delayStart={0.4} />
               </span>
               <span className="block">
                 <AnimatedWords
+                  inView
                   text="Stack for Medical Franchises"
-                  delayStart={3.75}
+                  delayStart={0.55}
                 />
               </span>
             </h2>
@@ -459,7 +463,7 @@ function Home() {
               <AnimatedDottedFrame
                 className="absolute"
                 style={{ left: '-135.75px', top: '43.25px' }}
-                startDelay={4200}
+                startDelay={1400}
               />
             </div>
 
@@ -480,8 +484,9 @@ function Home() {
                 padding: 12,
               }}
               initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: 'easeOut', delay: 3.95 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: 'easeOut', delay: 0.6 }}
             >
               <div className="mb-2 flex items-center gap-2">
                 <img src={programmingArrow} alt="" width={14} height={14} />
@@ -563,8 +568,9 @@ function Home() {
           <motion.div
             className="relative min-h-[360px] rounded-[22px] bg-white p-6 md:p-7"
             initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut', delay: 3.3 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.25 }}
           >
             <div className="flex items-start justify-between gap-4">
               <div className="flex items-center gap-3">
@@ -604,14 +610,16 @@ function Home() {
               style={{ lineHeight: 1.3 }}
             >
               <AnimatedWords
+                inView
                 text="Bookd built our entire growth system from scratch."
                 className="text-foreground"
-                delayStart={3.6}
+                delayStart={0.4}
               />{' '}
               <AnimatedWords
+                inView
                 text="Lead response went from hours to under 2 minutes, our booking rate jumped immediately."
                 className="text-muted-foreground"
-                delayStart={3.75}
+                delayStart={0.55}
                 stagger={0.04}
               />
             </blockquote>
