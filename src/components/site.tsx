@@ -141,7 +141,7 @@ export function Star({ half = false }: { half?: boolean }) {
 
 /* ---------------- Header ---------------- */
 
-const WORDMARK = 'Bookd'
+const WORDMARK = 'bookd'
 
 const NAV_LINKS = [
   { label: 'Home', to: '/' },
@@ -326,7 +326,7 @@ export function Footer() {
         <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
           <Link to="/" className="flex items-center" style={{ gap: '9.23px' }}>
             <img src={mainLogo} alt="Bookd logo" width={30} height={30} />
-            <span className="text-[22px] font-bold tracking-tight text-black">Bookd</span>
+            <span className="text-[22px] font-bold tracking-tight text-black">bookd</span>
           </Link>
           <nav className="flex flex-wrap items-center gap-7">
             {NAV_LINKS.map((link) => (
