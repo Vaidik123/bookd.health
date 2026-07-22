@@ -30,12 +30,26 @@ export function AnimatedWords({
   const shouldAnimate = inView ? isInView : true
   const words = text.split(' ')
   // iOS Safari: background-clip:text fails when descendants have transforms,
-  // so the gradient must live on the animated word spans themselves.
+  // so the gradient lives on each animated word span — but sized/offset so
+  // the words compose one continuous gradient across the whole phrase.
   const isGradient = className.includes('gradient-text')
   const outerClass = isGradient
     ? className.replace('gradient-text', '').trim()
     : className
   const wordClass = isGradient ? 'inline-block gradient-text' : 'inline-block'
+  const totalChars = text.length
+  const gradientStyle = (i: number): React.CSSProperties | undefined => {
+    if (!isGradient) return undefined
+    const before = words.slice(0, i).join(' ').length + (i > 0 ? 1 : 0)
+    const startFrac = before / totalChars
+    const widthFrac = words[i].length / totalChars
+    const pos =
+      widthFrac >= 1 ? 0 : (100 * startFrac) / (1 - widthFrac)
+    return {
+      backgroundSize: `${100 / widthFrac}% 100%`,
+      backgroundPosition: `${pos}% 0`,
+    }
+  }
 
   return (
     <span ref={ref} className={outerClass}>
@@ -50,6 +64,7 @@ export function AnimatedWords({
         >
           <motion.span
             className={wordClass}
+            style={gradientStyle(i)}
             initial={{ y: '110%', opacity: 0 }}
             animate={shouldAnimate ? { y: '0%', opacity: 1 } : undefined}
             transition={{
