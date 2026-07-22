@@ -36,7 +36,10 @@ export function AnimatedWords({
         <span
           key={i}
           className="inline-block overflow-hidden align-bottom"
-          style={{ paddingBottom: '0.2em', marginBottom: '-0.2em' }}
+          style={{
+            padding: '0 0.08em 0.28em 0.08em',
+            margin: '0 -0.08em -0.28em -0.08em',
+          }}
         >
           <motion.span
             className="inline-block"
