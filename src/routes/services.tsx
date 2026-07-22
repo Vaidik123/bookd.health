@@ -165,7 +165,7 @@ function Services() {
             <span className="block text-[38px] sm:text-[52px] md:text-[76px]">
               <AnimatedWords
                 text="One growth system."
-                className="text-foreground/25"
+                className="gradient-text"
                 delayStart={0.85}
                 stagger={0.06}
               />

@@ -141,3 +141,11 @@
   from { opacity: 0.2; transform: scale(2.4); }
   to   { opacity: 1;   transform: scale(1);   }
 }
+
+.gradient-text {
+  background: linear-gradient(92deg, #E23A0E 0%, #F09A3E 35%, #FFD259 60%, #78B4FF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
