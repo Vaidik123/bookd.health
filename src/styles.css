@@ -146,6 +146,7 @@
   /* vertical padding extends the painted area so descenders (p, g, y)
      stay visible with background-clip: text; inline v-padding is layout-neutral */
   padding: 0.3em 0;
+  margin: -0.3em 0;
   background: linear-gradient(92deg, #E23A0E 0%, #F09A3E 35%, #FFD259 60%, #78B4FF 100%);
   -webkit-background-clip: text;
   background-clip: text;
