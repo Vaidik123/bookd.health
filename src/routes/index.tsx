@@ -338,7 +338,7 @@ function Home() {
               />{' '}
               <AnimatedWords
                 text="medical practice"
-                className="text-foreground/25"
+                className="gradient-text"
                 delayStart={1.15}
                 stagger={0.05}
               />
@@ -704,7 +704,7 @@ function Home() {
               <AnimatedWords
                 inView
                 text="in one place"
-                className="text-foreground/25"
+                className="gradient-text"
                 delayStart={0.2}
                 stagger={0.05}
               />
@@ -764,7 +764,7 @@ function Home() {
                 <AnimatedWords
                   inView
                   text="Medical Franchises"
-                  className="text-white/40"
+                  className="gradient-text"
                   delayStart={0.15}
                   stagger={0.05}
                 />
@@ -816,7 +816,7 @@ function Home() {
               <AnimatedWords
                 inView
                 text="Scale When Ready."
-                className="text-foreground/25"
+                className="gradient-text"
                 delayStart={0.2}
                 stagger={0.05}
               />

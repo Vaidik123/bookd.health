@@ -98,7 +98,7 @@ function Work() {
               <AnimatedWords text="Real work." delayStart={0.6} stagger={0.06} />{' '}
               <AnimatedWords
                 text="Real results."
-                className="text-foreground/25"
+                className="gradient-text"
                 delayStart={0.85}
                 stagger={0.06}
               />
@@ -141,7 +141,7 @@ function Work() {
                 <AnimatedWords
                   inView
                   text="Now built for you."
-                  className="text-white/40"
+                  className="gradient-text"
                   delayStart={0.2}
                   stagger={0.05}
                 />
@@ -195,7 +195,7 @@ function Work() {
               <AnimatedWords
                 inView
                 text="work."
-                className="text-foreground/25"
+                className="gradient-text"
                 delayStart={0.15}
                 stagger={0.05}
               />
@@ -268,7 +268,7 @@ function Work() {
               <AnimatedWords
                 inView
                 text="work."
-                className="text-foreground/25"
+                className="gradient-text"
                 delayStart={0.15}
                 stagger={0.05}
               />

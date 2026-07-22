@@ -257,7 +257,7 @@ function Services() {
               <AnimatedWords
                 inView
                 text="We've got answers."
-                className="text-foreground/25"
+                className="gradient-text"
                 delayStart={0.15}
                 stagger={0.05}
               />
