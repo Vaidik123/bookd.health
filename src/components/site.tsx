@@ -29,9 +29,16 @@ export function AnimatedWords({
   const isInView = useInView(ref, { once: true, margin: '-80px' })
   const shouldAnimate = inView ? isInView : true
   const words = text.split(' ')
+  // iOS Safari: background-clip:text fails when descendants have transforms,
+  // so the gradient must live on the animated word spans themselves.
+  const isGradient = className.includes('gradient-text')
+  const outerClass = isGradient
+    ? className.replace('gradient-text', '').trim()
+    : className
+  const wordClass = isGradient ? 'inline-block gradient-text' : 'inline-block'
 
   return (
-    <span ref={ref} className={className}>
+    <span ref={ref} className={outerClass}>
       {words.map((word, i) => (
         <span
           key={i}
@@ -42,7 +49,7 @@ export function AnimatedWords({
           }}
         >
           <motion.span
-            className="inline-block"
+            className={wordClass}
             initial={{ y: '110%', opacity: 0 }}
             animate={shouldAnimate ? { y: '0%', opacity: 1 } : undefined}
             transition={{
