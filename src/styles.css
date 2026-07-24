@@ -61,6 +61,7 @@
   }
 }
 
+.mesh-static,
 .mesh-showcase {
   position: relative;
   background-color: #0c0a09;
@@ -74,7 +75,9 @@
     radial-gradient(55% 75% at 0% 0%, rgba(120, 80, 40, 0.85) 0%, rgba(120, 80, 40, 0) 60%),
     linear-gradient(180deg, #1a120c 0%, #0c0a09 100%);
   background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 200% 200%;
-  animation: meshFlow 14s ease-in-out infinite, meshDrift 18s ease-in-out infinite;
+}
+.mesh-showcase {
+  animation: meshDrift 18s ease-in-out infinite;
 }
 .mesh-showcase::before {
   content: "";
@@ -90,6 +93,7 @@
   animation: shimmerSweep 9s linear infinite;
   border-radius: inherit;
 }
+.mesh-static > *,
 .mesh-showcase > * { position: relative; z-index: 1; }
 
 @keyframes meshFlow {

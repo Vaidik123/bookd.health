@@ -372,7 +372,7 @@ function Home() {
               href={CAL_URL}
               target="_blank"
               rel="noreferrer noopener"
-              className="mesh-showcase overflow-hidden rounded-full px-6 py-3 text-[15px] font-semibold text-white"
+              className="mesh-static overflow-hidden rounded-full px-6 py-3 text-[15px] font-semibold text-white"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.5, ease: 'backOut', delay: 1.65 }}
@@ -912,14 +912,14 @@ function Home() {
                   rel="noreferrer noopener"
                   className={
                     p.popular
-                      ? 'mesh-showcase mt-8 overflow-hidden rounded-full px-6 py-3 text-center text-[15px] font-semibold text-white transition-transform duration-200 hover:scale-[1.02]'
+                      ? 'mesh-static mt-8 overflow-hidden rounded-full px-6 py-3 text-center text-[15px] font-semibold text-white transition-transform duration-200 hover:scale-[1.02]'
                       : 'group/btn relative mt-8 overflow-hidden rounded-full border border-border bg-white px-6 py-3 text-center text-[15px] font-medium'
                   }
                 >
                   {!p.popular && (
                     <span
                       aria-hidden
-                      className="mesh-showcase pointer-events-none inset-0 rounded-[inherit] opacity-0 transition-opacity duration-400 group-hover/btn:opacity-100 group-active/btn:opacity-100"
+                      className="mesh-static pointer-events-none inset-0 rounded-[inherit] opacity-0 transition-opacity duration-400 group-hover/btn:opacity-100 group-active/btn:opacity-100"
                       style={{ position: 'absolute' }}
                     />
                   )}

@@ -117,7 +117,7 @@ export function MeshOverlay() {
   return (
     <div
       aria-hidden
-      className="mesh-showcase pointer-events-none inset-0 rounded-[inherit] opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-active:opacity-100"
+      className="mesh-static pointer-events-none inset-0 rounded-[inherit] opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-active:opacity-100"
       style={{ position: 'absolute' }}
     />
   )
@@ -306,7 +306,7 @@ export function Header({ active }: { active: string }) {
               href={CAL_URL}
               target="_blank"
               rel="noreferrer noopener"
-              className="mesh-showcase mt-2 block overflow-hidden rounded-xl px-4 py-3.5 text-center text-[16px] font-semibold text-white"
+              className="mesh-static mt-2 block overflow-hidden rounded-xl px-4 py-3.5 text-center text-[16px] font-semibold text-white"
             >
               Book a Call
             </a>
@@ -333,7 +333,7 @@ export function MobileCta() {
         href={CAL_URL}
         target="_blank"
         rel="noreferrer noopener"
-        className="mesh-showcase block overflow-hidden rounded-full px-6 py-4 text-center text-[16px] font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.25)]"
+        className="mesh-static block overflow-hidden rounded-full px-6 py-4 text-center text-[16px] font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.25)]"
       >
         Book a Call — Free Growth Audit
       </a>

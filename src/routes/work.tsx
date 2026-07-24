@@ -240,7 +240,7 @@ function Work() {
 
         {/* Results band */}
         <section className="pt-24 md:pt-28">
-          <Rise className="mesh-showcase grid gap-5 overflow-hidden rounded-[22px] p-8 sm:grid-cols-2 md:grid-cols-4 md:p-10">
+          <Rise className="mesh-static grid gap-5 overflow-hidden rounded-[22px] p-8 sm:grid-cols-2 md:grid-cols-4 md:p-10">
             {RESULT_STATS.map((s) => (
               <div key={s.label} className="text-center">
                 <span className="text-[36px] font-medium tracking-tight text-white">
