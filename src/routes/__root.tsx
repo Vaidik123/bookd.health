@@ -22,6 +22,10 @@ export const Route = createRootRoute({
         content:
           'Growth systems built for medical franchises. From lead capture to booked appointments — automated, optimized, and built to scale.',
       },
+      {
+        name: 'facebook-domain-verification',
+        content: 'vo9w62wibgx795rad5bn0623p7yh6u',
+      },
     ],
     links: [
       { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
