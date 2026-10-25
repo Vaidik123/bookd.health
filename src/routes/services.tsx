@@ -84,6 +84,32 @@ const SERVICES = [
       'Pricing Sheets & Sales Collateral',
     ],
   },
+  {
+    num: '06',
+    title: 'AI Videos',
+    body: 'AI-generated video content engineered for conversions. Avatars, voiceovers, and short-form edits produced in days, not weeks — so your ad account never runs out of fresh creative.',
+    outcome: 'Scroll-stopping video ads at a fraction of production cost.',
+    includes: [
+      'AI Avatar & Spokesperson Videos',
+      'Script Writing & Hooks',
+      'AI Voiceovers & Dubbing',
+      'Short-Form Edits (Reels & Shorts)',
+      'Ad Variations at Scale',
+    ],
+  },
+  {
+    num: '07',
+    title: 'Image Retouching',
+    body: 'Pixel-perfect retouching for clinical and brand imagery. Before-and-afters, team portraits, and clinic photos polished into visuals patients trust.',
+    outcome: 'Polished, trustworthy visuals across every touchpoint.',
+    includes: [
+      'Before & After Cleanup',
+      'Skin & Portrait Retouching',
+      'Clinic & Product Photos',
+      'Background Cleanup & Color Grading',
+      'Ad-Ready Export Formats',
+    ],
+  },
 ]
 
 const FAQS = [
@@ -160,7 +186,7 @@ function Services() {
             style={{ lineHeight: 1.05, letterSpacing: '-0.035em' }}
           >
             <span className="block text-[38px] sm:text-[52px] md:text-[76px]">
-              <AnimatedWords text="Five services." delayStart={0.6} stagger={0.06} />
+              <AnimatedWords text="Seven services." delayStart={0.6} stagger={0.06} />
             </span>
             <span className="block text-[38px] sm:text-[52px] md:text-[76px]">
               <AnimatedWords

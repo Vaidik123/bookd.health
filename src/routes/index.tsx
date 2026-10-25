@@ -100,6 +100,8 @@ const KEY_FEATURES = [
   { label: 'Content & Ad Creatives', active: false },
   { label: 'Website & SEO', active: false },
   { label: 'Graphic Design & Branding', active: false },
+  { label: 'AI Videos', active: false },
+  { label: 'Image Retouching', active: false },
 ]
 
 const SERVICES = [
@@ -114,6 +116,14 @@ const SERVICES = [
   {
     title: 'Content & Ad Creatives',
     body: 'High-converting ad creatives, landing pages, and content built specifically for medical franchise audiences, designed to capture attention and convert.',
+  },
+  {
+    title: 'AI Videos',
+    body: 'Scroll-stopping AI-generated video ads — avatars, voiceovers, and short-form edits produced in days, not weeks, built to convert patients on social.',
+  },
+  {
+    title: 'Image Retouching',
+    body: 'Pixel-perfect retouching for clinical and brand imagery — before-and-afters, portraits, and clinic photos polished into trustworthy, ad-ready visuals.',
   },
 ]
 
@@ -471,10 +481,9 @@ function Home() {
             <motion.div
               className="absolute z-10 hidden flex-col md:flex"
               style={{
-                bottom: -24,
+                bottom: -44,
                 right: 214,
                 width: 210,
-                height: 222,
                 borderRadius: '13.654px',
                 border: '1px solid rgba(255,255,255,0.34)',
                 background:
@@ -528,7 +537,7 @@ function Home() {
                           : 'rgba(244,244,244,0)',
                         color: lit ? '#111114' : 'rgba(255,255,255,0.9)',
                       }}
-                      style={{ padding: '6px 4px', borderRadius: '4.312px' }}
+                      style={{ padding: '4px 4px', borderRadius: '4.312px' }}
                     >
                       {lit ? (
                         <motion.span
