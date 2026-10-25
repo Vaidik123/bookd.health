@@ -15,7 +15,7 @@ export const Route = createRootRoute({
       { charSet: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
-        title: 'Bookd — AI that converts patients for your medical practice',
+        title: 'So Bookd! — We get your calendar so bookd',
       },
       {
         name: 'description',

@@ -166,7 +166,7 @@ export function Star({ half = false }: { half?: boolean }) {
 
 /* ---------------- Header ---------------- */
 
-const WORDMARK = 'bookd'
+const WORDMARK = 'So Bookd!'
 
 const NAV_LINKS = [
   { label: 'Home', to: '/' },
@@ -209,7 +209,7 @@ export function Header({ active }: { active: string }) {
                   delay: 0.5 + i * 0.06,
                 }}
               >
-                {letter}
+                {letter === ' ' ? '\u00A0' : letter}
               </motion.span>
             </span>
           ))}
@@ -351,7 +351,7 @@ export function Footer() {
         <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
           <Link to="/" className="flex items-center" style={{ gap: '9.23px' }}>
             <img src={mainLogo} alt="Bookd logo" width={30} height={30} />
-            <span className="text-[22px] font-bold tracking-tight text-black">bookd</span>
+            <span className="text-[22px] font-bold tracking-tight text-black">So Bookd!</span>
           </Link>
           <nav className="flex flex-wrap items-center gap-7">
             {NAV_LINKS.map((link) => (

@@ -316,13 +316,13 @@ function Home() {
           >
             <span className="block text-[40px] sm:text-[56px] md:text-[84px]">
               <AnimatedWords
-                text="AI that converts patients"
+                text="We get your calendar"
                 delayStart={0.9}
                 stagger={0.05}
               />
             </span>
             <span className="block text-[40px] sm:text-[56px] md:text-[84px]">
-              <AnimatedWords text="for your" delayStart={1.05} stagger={0.05} />{' '}
+              <AnimatedWords text="so" delayStart={1.05} stagger={0.05} />{' '}
               <motion.video
                 ref={heroVideoRef}
                 src={nurseVideo}
@@ -337,7 +337,7 @@ function Home() {
                 transition={{ duration: 0.6, ease: 'backOut', delay: 1.2 }}
               />{' '}
               <AnimatedWords
-                text="medical practice"
+                text="bookd!"
                 className="gradient-text"
                 delayStart={1.15}
                 stagger={0.05}
@@ -352,10 +352,10 @@ function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut', delay: 1.35 }}
           >
-            From lead capture to booked appointments, automated, optimized, and
-            built to scale.
+            By slapping your practice in front of every patient in your area.
             <br />
-            Renowned brands trust us for transparent, growth-centric solutions.
+            From lead capture to booked appointments — automated, optimized,
+            and built to scale.
           </motion.p>
 
           <div className="mt-10 flex items-center justify-center gap-3">
@@ -664,6 +664,9 @@ function Home() {
                   key={group}
                   className="flex items-center gap-10 pr-10 text-white"
                 >
+                  <span className="whitespace-nowrap text-[15px] font-semibold tracking-wide">
+                    AFL Beauty Bar
+                  </span>
                   <img src={upsideLogo} alt="Upside" className="h-6" />
                   <span className="flex items-center gap-2">
                     <img src={nutanixMark} alt="" className="h-5 w-5" />
