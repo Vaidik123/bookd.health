@@ -172,7 +172,6 @@ const NAV_LINKS = [
   { label: 'Home', to: '/' },
   { label: 'Services', to: '/services' },
   { label: 'Work', to: '/work' },
-  { label: 'Pricing', to: '/#pricing' },
 ]
 
 export function Header({ active }: { active: string }) {
