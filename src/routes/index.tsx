@@ -80,18 +80,6 @@ function AnimatedDottedFrame({
   )
 }
 
-function AiBadge() {
-  return (
-    <svg width="14" height="12" viewBox="0 0 12 10" fill="none">
-      <path
-        d="M5.71198 0L9.56198 9.982H7.686L6.734 7.336H2.786L1.806 9.982H0L3.85 0H5.71198ZM6.272 6.02L4.788 1.82L3.234 6.02H6.272ZM11.998 0.014V9.982H10.234V0.014H11.998Z"
-        opacity="0.85"
-        fill="currentColor"
-      />
-    </svg>
-  )
-}
-
 /* ---------------- Data (copy from bookd.health) ---------------- */
 
 const KEY_FEATURES = [
@@ -274,7 +262,7 @@ function Home() {
           <motion.div
             className="inline-flex items-center"
             style={{
-              padding: '4px 11px 4px 4px',
+              padding: '6px 14px',
               gap: 10,
               borderRadius: 8,
               background: 'rgba(192,192,192,0.17)',
@@ -283,12 +271,6 @@ function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.7 }}
           >
-            <span
-              className="flex items-center justify-center bg-white text-foreground"
-              style={{ width: 28, height: 22, borderRadius: 5 }}
-            >
-              <AiBadge />
-            </span>
             <span className="text-sm">
               Lead capture, automation &amp; booked appointments
             </span>
